@@ -33,10 +33,10 @@ void loop() {
     int b[len];
     for(i=0;i<len-1;i++){
         dec2Bin(input[i]);
-        delay(3000);
-        clearled();
+        delay(700);
+        //clearled();
     }Serial.println(" ");
-    delay(8000);
+    delay(2000);
 }
 void dec2Bin(int x)
 {
@@ -58,11 +58,11 @@ void dec2Bin(int x)
         digitalWrite(led, LOW);
       }led++;
       Serial.println(a[j]);
-      delay(1000);
+      delay(400);
     }Wire.beginTransmission(8); // transmit to device #8
      Wire.write(a,9);              // sends one byte
      Wire.endTransmission();
-     delay(500);
+     delay(300);
     Serial.println(" ");
 }
 void clearled(){
